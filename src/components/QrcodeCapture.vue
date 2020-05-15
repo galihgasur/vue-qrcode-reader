@@ -4,8 +4,8 @@
     type="file"
     name="image"
     accept="image/*"
-    capture="environment"
-    multiple
+    :capture="capture"
+    :multiple="multiple"
   />
 </template>
 
@@ -24,6 +24,14 @@ export default {
     worker: {
       type: Function,
       default: Worker
+    },
+    capture: {
+      type: String,
+      default: ""
+    },
+    multiple: {
+      type: Boolean,
+      default: false
     }
   },
 
